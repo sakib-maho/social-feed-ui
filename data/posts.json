@@ -1,17 +1,29 @@
 [
   {
-    "author": "Sakib",
-    "content": "Shipping a cleaner repository pass today with tests and docs.",
-    "tags": ["devlog", "github", "quality"]
+    "id": "p1",
+    "author": "Amina Rahman",
+    "content": "Shipped a camera AR demo that turns air-written words into live objects.",
+    "tags": ["ai", "computer-vision", "portfolio"],
+    "createdAt": "2026-07-13T10:00:00.000Z",
+    "likes": 12,
+    "comments": ["This is awesome!", "Demo link?"]
   },
   {
-    "author": "Ava",
-    "content": "Finished API integration and pushed performance fixes.",
-    "tags": ["api", "backend", "release"]
+    "id": "p2",
+    "author": "Kenji Sato",
+    "content": "Notes from today's backend review: prefer explicit error budgets over silent retries.",
+    "tags": ["backend", "engineering"],
+    "createdAt": "2026-07-12T08:30:00.000Z",
+    "likes": 5,
+    "comments": ["Agree on observability."]
   },
   {
-    "author": "Noah",
-    "content": "Working on responsive feed cards for mobile and desktop.",
-    "tags": ["frontend", "css", "ui"]
+    "id": "p3",
+    "author": "Maria Lopez",
+    "content": "Looking for open-source RAG examples that cite sources clearly.",
+    "tags": ["rag", "nlp", "ai"],
+    "createdAt": "2026-07-11T15:10:00.000Z",
+    "likes": 8,
+    "comments": []
   }
 ]

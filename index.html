@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Feed Clone</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Feed UI</title>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="container topbar">
-    <h1>Social Feed Clone</h1>
-    <input id="searchInput" type="search" placeholder="Search posts or author">
-  </header>
+  <div class="page">
+    <header class="topbar">
+      <h1>Feed</h1>
+      <input id="searchInput" type="search" placeholder="Search posts, authors, tags…" />
+    </header>
 
-  <main class="container">
-    <section id="meta" class="meta"></section>
-    <section id="feed" class="feed"></section>
-  </main>
+    <section class="composer card">
+      <h2>Create post</h2>
+      <form id="createForm">
+        <input id="authorInput" type="text" placeholder="Your name" required maxlength="40" />
+        <textarea id="contentInput" placeholder="What's happening?" required maxlength="400"></textarea>
+        <input id="tagsInput" type="text" placeholder="tags (comma separated)" />
+        <button type="submit">Publish</button>
+      </form>
+    </section>
+
+    <section class="filters">
+      <button type="button" class="chip active" data-tag="all">All</button>
+      <div id="tagChips" class="chip-row"></div>
+    </section>
+
+    <main id="feed" class="feed"></main>
+  </div>
 
   <template id="postTemplate">
-    <article class="post">
-      <h2 class="author"></h2>
+    <article class="card post">
+      <header class="post-header">
+        <strong class="author"></strong>
+        <time class="when muted"></time>
+      </header>
       <p class="content"></p>
       <div class="tags"></div>
+      <footer class="actions">
+        <button type="button" class="like-btn">Like <span class="like-count">0</span></button>
+        <button type="button" class="toggle-comments">Comments <span class="comment-count">0</span></button>
+      </footer>
+      <div class="comments hidden">
+        <ul class="comment-list"></ul>
+        <form class="comment-form">
+          <input type="text" class="comment-input" placeholder="Add a comment…" required />
+          <button type="submit">Reply</button>
+        </form>
+      </div>
     </article>
   </template>
 
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js" type="module"></script>
 </body>
 </html>
