@@ -1,4 +1,4 @@
-# Social Feed Clone (Facebook-copy Upgraded)
+# Social Feed UI
 
 <!-- BrandCloud:readme-standard -->
 [![Maintained](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](#)
